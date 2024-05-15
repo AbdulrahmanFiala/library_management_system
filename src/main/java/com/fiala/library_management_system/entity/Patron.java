@@ -16,16 +16,12 @@ public class Patron {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "author")
-    private String author;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "publication_year")
-    private Year publicationYear;
-
-    @Column(name = "isbn")
-    private String isbn;
-
+    @Column(name = "phone_number")
+    private String phoneNumber;
 }
