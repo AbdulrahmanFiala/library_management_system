@@ -2,6 +2,7 @@ package com.fiala.library_management_system.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
@@ -11,8 +12,8 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "record")
 @Data
+@NoArgsConstructor
 public class Record {
-
     public Record(LocalDate borrowDate, Book book, Patron patron) {
         this.borrowDate = borrowDate;
         this.book = book;
