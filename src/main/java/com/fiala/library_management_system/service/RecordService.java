@@ -6,6 +6,7 @@ import com.fiala.library_management_system.dao.RecordRepository;
 import com.fiala.library_management_system.entity.Book;
 import com.fiala.library_management_system.entity.Patron;
 import com.fiala.library_management_system.entity.Record;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +20,7 @@ public class RecordService {
     private PatronRepository patronRepository;
     private RecordRepository recordRepository;
 
+    @Autowired
     public RecordService(BookRepository bookRepository, PatronRepository patronRepository, RecordRepository recordRepository) {
         this.bookRepository = bookRepository;
         this.patronRepository = patronRepository;
