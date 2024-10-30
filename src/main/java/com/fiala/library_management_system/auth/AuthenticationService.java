@@ -1,6 +1,5 @@
 package com.fiala.library_management_system.auth;
 
-import com.fiala.library_management_system.service.JwtService;
 import com.fiala.library_management_system.dto.requests.AuthenticationRequest;
 import com.fiala.library_management_system.dto.responses.AuthenticationResponse;
 import com.fiala.library_management_system.dto.requests.RegisterRequest;

@@ -1,6 +1,6 @@
 package com.fiala.library_management_system.config;
 
-import com.fiala.library_management_system.service.JwtService;
+import com.fiala.library_management_system.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
