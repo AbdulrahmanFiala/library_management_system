@@ -1,4 +1,4 @@
-package com.fiala.library_management_system.service;
+package com.fiala.library_management_system.auth;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -62,8 +62,8 @@ public class JwtService {
     }
 
     private Claims extractAllClaims(String token){
-        return Jwts.
-                parserBuilder()
+        return Jwts
+                .parserBuilder()
                 .setSigningKey(getSignInKey())
                 .build()
                 .parseClaimsJws(token)
