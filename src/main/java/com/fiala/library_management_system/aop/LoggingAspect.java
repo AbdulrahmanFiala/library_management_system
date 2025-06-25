@@ -21,8 +21,7 @@ public class LoggingAspect {
     }
 
 
-    @Around("execution(org.springframework.http.ResponseEntity *(..)) && " +
-            "within(com.fiala.library_management_system.controller..*)")
+    @Around("execution(* com.fiala.library_management_system.controller.*.*(..))")
     public Object logResponseEntityMethods(ProceedingJoinPoint joinPoint) throws Throwable {
         return logMethodExecution(joinPoint, "REST_ENDPOINT");
     }
