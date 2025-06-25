@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class RecordControllerTest {
+class BorrowRecordControllerTest {
 
     @Mock
     private RecordService recordService;
@@ -18,7 +18,7 @@ class RecordControllerTest {
     @InjectMocks
     private RecordController recordController;
 
-    public RecordControllerTest() {
+    public BorrowRecordControllerTest() {
         MockitoAnnotations.initMocks(this);
     }
 

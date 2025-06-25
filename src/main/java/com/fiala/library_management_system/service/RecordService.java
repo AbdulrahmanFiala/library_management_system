@@ -5,12 +5,13 @@ import com.fiala.library_management_system.dao.PatronRepository;
 import com.fiala.library_management_system.dao.RecordRepository;
 import com.fiala.library_management_system.entity.Book;
 import com.fiala.library_management_system.entity.Patron;
-import com.fiala.library_management_system.entity.Record;
+import com.fiala.library_management_system.entity.BorrowRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,15 +33,15 @@ public class RecordService {
         Optional<Book> book = bookRepository.findById(bookId);
         Optional<Patron> patron = patronRepository.findById(patronId);
 
-        Optional<Record> validateBorrow = recordRepository.findByPatronIdAndBookId(patronId, bookId);
+        Optional<BorrowRecord> validateBorrow = recordRepository.findByPatronIdAndBookId(patronId, bookId);
 
         if (book.isEmpty() || patron.isEmpty() || validateBorrow.isPresent()) {
             throw new Exception("Either Book or patron don't exist or the book already checked out by patron");
         }
 
-        Record record = new Record(LocalDate.now(), book.get(), patron.get());
+        BorrowRecord borrowRecord = new BorrowRecord(LocalDate.now(), book.get(), patron.get());
 
-        recordRepository.save(record);
+        recordRepository.save(borrowRecord);
 
         return book.get();
     }
@@ -49,14 +50,14 @@ public class RecordService {
         Optional<Book> book = bookRepository.findById(bookId);
         Optional<Patron> patron = patronRepository.findById(patronId);
 
-        Optional<Record> validateBorrow = recordRepository.findByPatronIdAndBookId(patronId, bookId);
+        Optional<BorrowRecord> validateBorrow = recordRepository.findByPatronIdAndBookId(patronId, bookId);
 
         if (book.isEmpty() || patron.isEmpty() || validateBorrow.isEmpty()) {
             throw new Exception("Either Book or patron don't exist or the book not checked out by patron");
         }
 
-        Record record = validateBorrow.get();
-        record.setReturnDate(LocalDate.now());
+        BorrowRecord borrowRecord = validateBorrow.get();
+        borrowRecord.setReturnDate(LocalDate.now());
     }
 
 

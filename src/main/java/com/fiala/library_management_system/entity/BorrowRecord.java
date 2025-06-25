@@ -12,8 +12,8 @@ import java.time.LocalDate;
 @Table(name = "record")
 @Data
 @NoArgsConstructor
-public class Record {
-    public Record(LocalDate borrowDate, Book book, Patron patron) {
+public class BorrowRecord {
+    public BorrowRecord(LocalDate borrowDate, Book book, Patron patron) {
         this.borrowDate = borrowDate;
         this.book = book;
         this.patron = patron;
