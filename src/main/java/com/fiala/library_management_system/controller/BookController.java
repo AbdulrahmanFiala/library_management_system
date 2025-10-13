@@ -1,14 +1,12 @@
-// BookController.java
 package com.fiala.library_management_system.controller;
 
 import com.fiala.library_management_system.entity.Book;
 import com.fiala.library_management_system.service.BookService;
-import com.fiala.library_management_system.service.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController

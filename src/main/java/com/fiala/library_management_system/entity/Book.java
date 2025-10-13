@@ -1,10 +1,10 @@
 package com.fiala.library_management_system.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import java.time.Year;
 
@@ -31,5 +31,5 @@ public class Book {
     @NotBlank(message = "ISBN is mandatory")
     @Size(max = 13, message = "ISBN is a 13-digit number")
     @Column(name = "isbn")
-    private  String isbn;
+    private String isbn;
 }
