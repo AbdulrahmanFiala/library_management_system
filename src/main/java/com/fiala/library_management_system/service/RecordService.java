@@ -11,15 +11,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 @Service
 @Transactional
 public class RecordService {
-    private BookRepository bookRepository;
-    private PatronRepository patronRepository;
-    private RecordRepository recordRepository;
+    private final BookRepository bookRepository;
+    private final PatronRepository patronRepository;
+    private final RecordRepository recordRepository;
 
     @Autowired
     public RecordService(BookRepository bookRepository, PatronRepository patronRepository, RecordRepository recordRepository) {

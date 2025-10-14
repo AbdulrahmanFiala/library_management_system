@@ -52,7 +52,7 @@ public class PatronController {
     public ResponseEntity<?> deletePatron(@PathVariable Long id) {
         try {
             patronService.deletePatron(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

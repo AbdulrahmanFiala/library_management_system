@@ -50,7 +50,7 @@ public class BookController {
     public ResponseEntity<?> deleteBook(@PathVariable Long id) {
         try {
             bookService.deleteBook(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
