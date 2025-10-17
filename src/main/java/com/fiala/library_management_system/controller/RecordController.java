@@ -1,6 +1,5 @@
 package com.fiala.library_management_system.controller;
 
-import com.fiala.library_management_system.entity.BorrowRecord;
 import com.fiala.library_management_system.service.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

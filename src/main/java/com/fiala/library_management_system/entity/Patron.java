@@ -7,13 +7,14 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 
 
 @Entity
 @Table(name ="patron")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Patron {
 
     @Id
