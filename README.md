@@ -1,6 +1,6 @@
 # Library Management System
 
-A comprehensive  REST API for managing library operations including books, patrons, and borrowing records. Built with Spring Boot 3.2.5, this system provides secure authentication using JWT tokens and supports full CRUD operations for library management.
+A comprehensive REST API for managing library operations including books, patrons, and borrowing records. Built with Spring Boot 3.2.5, this system provides secure authentication using JWT tokens and supports full CRUD operations for library management.
 
 ## Features
 
